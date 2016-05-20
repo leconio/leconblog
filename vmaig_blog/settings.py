@@ -219,5 +219,5 @@ QINIU_SECRET_KEY = ''
 QINIU_BUCKET_NAME = ''
 
 # 网站标题等内容配置
-WEBSITE_TITLE = u'Vmaig'
-WEBSITE_WELCOME = u'欢迎来到Vmaig'
+WEBSITE_TITLE = u'LIUCL'
+WEBSITE_WELCOME = u'网站建设中'
