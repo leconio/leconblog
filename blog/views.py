@@ -122,7 +122,6 @@ class ArticleView(BaseMixin, DetailView):
         set = super(ArticleView, self).get_object(queryset)
         renderer = HighlightRenderer()
         set.content = mistune.markdown(set.content, renderer=renderer)
-        print(set.content)
         return set
 
 
