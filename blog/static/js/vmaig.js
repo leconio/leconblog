@@ -20,3 +20,9 @@ $(function () {
     $("[data-toggle='tooltip']").tooltip();
 });
 $('#nav-login').tooltip('hide');
+
+///* 回到顶部 */
+//$('#toTop').click(function () {
+//    $('html,body').animate({scrollTop: '0px'}, 1000);
+//    return false;
+//});
