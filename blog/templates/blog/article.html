@@ -53,10 +53,38 @@
             {#        {% include "./blog/widgets/hotest_posts.html"%}#}
             {#        {% include "./vmaig_comments/latest_comments.html"%}#}
 
-            <div id="toTop" class="toTop hidden-sm">
+            <div id="gotop" class="toTop hidden-sm" style="display: none">
                 <a id="back-to-top" class="btn btn-default btn-lg" href="#vmaig">
                     <span class="glyphicon glyphicon-chevron-up"></span>
                 </a>
+                <script>
+                    ///* 回到顶部 */
+                    backTop = function (btnId) {
+                        var btn = document.getElementById(btnId);
+                        var d = document.documentElement;
+                        var b = document.body;
+                        screen.onscroll = set;
+                        btn.onclick = function () {
+                            btn.style.display = "none";
+                            window.onscroll = null;
+                            this.timer = setInterval(function () {
+                                d.scrollTop -= Math.ceil((d.scrollTop + b.scrollTop) * 0.1);
+                                b.scrollTop -= Math.ceil((d.scrollTop + b.scrollTop) * 0.1);
+                                if ((d.scrollTop + b.scrollTop) == 0) clearInterval(btn.timer, window.onscroll = set);
+                            }, 10);
+                        };
+                        function set() {
+                            console.log('123')
+                            btn.style.display = (d.scrollTop + b.scrollTop > 100) ? 'block' : "none";
+                        }
+                    };
+                    backTop('gotop');
+
+                    (new SidebarFollow()).init({
+                        element: jQuery('.row'),
+                        distanceToTop: 0
+                    });
+                </script>
             </div>
         </div>
     </div>

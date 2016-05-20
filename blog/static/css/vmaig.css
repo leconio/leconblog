@@ -626,4 +626,13 @@ footer {
 .toTop {
     position: fixed;
     bottom: 120px;
+    cursor: pointer;
+    display: block;
+    height: 60px;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in 0s, opacity 0.3s ease-out 0s;
+    top: auto;
+    width: 60px;
+    z-index: 999;
+
 }
