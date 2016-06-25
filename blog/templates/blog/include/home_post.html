@@ -22,11 +22,11 @@
             <div class="post-tags">
                 {% for tag in post.get_tags%}
                 <a href="{% url 'tag-detail-view' tag%}" class="{%if forloop.counter0%}hidden-xs{%endif%} ">
-                    <span class="label label-vmaig-{{forloop.counter}} btn">{{tag}}</span>
+                    <span class="label label-liucl-{{ forloop.counter }} btn">{{ tag }}</span>
                 </a>
                 {% endfor %}
                 <a class="visible-xs-inline-block">
-                    <span class="label label-vmaig-2 btn ">...</span>
+                    <span class="label label-liucl-2 btn ">...</span>
                 </a>
  
             </div>
@@ -51,7 +51,7 @@
                     ...
                 {% endif %}
                 </p>
-                <a type="button" class="btn btn-vmaig pull-right hidden-xs btn-detail" href="{{ article_url }}">阅读全文</a>
+                <a type="button" class="btn btn-liucl pull-right hidden-xs btn-detail" href="{{ article_url }}">阅读全文</a>
 
             </div>
         </div>

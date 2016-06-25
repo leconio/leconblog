@@ -2,7 +2,7 @@
 
 {% block main%}
 <div class="row">
-    <div id="vmaig-content" class="col-md-8 col-lg-9">
+    <div id="liucl-content" class="col-md-8 col-lg-9">
         <div id="tool" class="well clearfix">
             <div class="tags">
                 <div class="tag-list" style="float:left">
@@ -43,23 +43,23 @@
                 {% endif %}
             </div>
             <div id="loading" style="height:100px;line-height:100px;text-align:center;display:none;">
-                <img src="http://vmaig.qiniudn.com/loading.gif" alt="">
+                <img src="http://liucl.qiniudn.com/loading.gif" alt="">
             </div>
 
 
         </div>
-        <button id="all-post-more" type="button" class="btn btn-vmaig" value="all" style="width:100%">
+        <button id="all-post-more" type="button" class="btn btn-liucl" value="all" style="width:100%">
             加载更多
             <span class="glyphicon glyphicon-menu-down"></span>
         </button>
 
     </div>
 
-    <div id="vmaig-side" class="col-md-4 col-lg-3 hidden-xs">
+    <div id="liucl-side" class="col-md-4 col-lg-3 hidden-xs">
         {#        {% include "./blog/widgets/tags_cloud.html"%}#}
         {% include "./blog/widgets/search.html"%}
         {% include "./blog/widgets/hotest_posts.html"%}
-        {% include "./vmaig_comments/latest_comments.html"%}
+        {% include "./liucl_comments/latest_comments.html" %}
     </div>
 </div>
 

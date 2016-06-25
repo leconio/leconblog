@@ -5,7 +5,7 @@
     {% url 'category-detail-view' article.category.name as category_url %}
 
     <div class="row">
-        <div id="vmaig-content" class="col-md-8 col-lg-9">
+        <div id="liucl-content" class="col-md-8 col-lg-9">
             <div id="article-page" class="well">
                 <ol class="breadcrumb">
                     <li><a href="/"><span class="glyphicon glyphicon-home"></span></a></li>
@@ -28,7 +28,7 @@
                     <div class="article-tags">
                         {% for tag in article.get_tags %}
                             <a href="{% url 'tag-detail-view' tag %}">
-                                <span class="label label-vmaig-{{ forloop.counter }} btn">{{ tag }}</span>
+                                <span class="label label-liucl-{{ forloop.counter }} btn">{{ tag }}</span>
                             </a>
                         {% endfor %}
                     </div>
@@ -42,19 +42,19 @@
             </div>
 
             <!--评论框 -->
-            {% include "./vmaig_comments/vmaig_comments.html" %}
+            {% include "./liucl_comments/liucl_comments.html" %}
 
         </div>
 
-        <div id="vmaig-side" class="col-md-4 col-lg-3 hidden-xs">
+        <div id="liucl-side" class="col-md-4 col-lg-3 hidden-xs">
 
             {% include "./blog/widgets/markdownnav.html" %}
             {#        {% include "./blog/widgets/search.html"%}#}
             {#        {% include "./blog/widgets/hotest_posts.html"%}#}
-            {#        {% include "./vmaig_comments/latest_comments.html"%}#}
+            {#        {% include "./liucl_comments/latest_comments.html"%}#}
 
             <div id="toTop" class="toTop hidden-sm">
-                <a id="back-to-top" class="btn btn-default btn-lg" href="#vmaig">
+                <a id="back-to-top" class="btn btn-default btn-lg" href="#liucl">
                     <span class="glyphicon glyphicon-chevron-up"></span>
                 </a>
             </div>

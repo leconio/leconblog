@@ -17,7 +17,7 @@
         <div class="post-tags" style="float:right">
             {% for tag in post.get_tags%}
             <a href="{% url 'tag-detail-view' tag %}">
-                <span class="label label-vmaig-{{forloop.counter}} btn">{{tag}}</span>
+                <span class="label label-liucl-{{ forloop.counter }} btn">{{ tag }}</span>
             </a>
             {% endfor %}
         </div>
