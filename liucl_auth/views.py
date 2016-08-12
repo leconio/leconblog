@@ -24,11 +24,11 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+
 # Create your views here.
 
 
 class UserControl(View):
-
     def post(self, request, *args, **kwargs):
         # 获取要对用户进行什么操作
         slug = self.kwargs.get('slug')
@@ -70,8 +70,8 @@ class UserControl(View):
 
         mydict = {"errors": errors}
         return HttpResponse(
-            json.dumps(mydict),
-            content_type="application/json"
+                json.dumps(mydict),
+                content_type="application/json"
         )
 
     def logout(self, request):
@@ -83,53 +83,54 @@ class UserControl(View):
             return HttpResponse('OK')
 
     def register(self, request):
-        username = self.request.POST.get("username", "")
-        password1 = self.request.POST.get("password1", "")
-        password2 = self.request.POST.get("password2", "")
-        email = self.request.POST.get("email", "")
-
-        form = liuclUserCreationForm(request.POST)
-
-        errors = []
-        # 验证表单是否正确
-        if form.is_valid():
-            current_site = get_current_site(request)
-            site_name = current_site.name
-            domain = current_site.domain
-            title = u"欢迎来到 {} ！".format(site_name)
-            message = "".join([
-                u"你好！ {} ,感谢注册 {} ！\n\n".format(username, site_name),
-                u"请牢记以下信息：\n",
-                u"用户名：{}\n".format(username),
-                u"邮箱：{}\n".format(email),
-                u"网站：http://{}\n\n".format(domain),
-            ])
-            from_email = None
-            try:
-                send_mail(title, message, from_email, [email])
-            except Exception as e:
-                logger.error(
-                    u'[UserControl]用户注册邮件发送失败:[{}]/[{}]'.format(
-                        username, email
-                    )
-                )
-                return HttpResponse(u"发送邮件错误!\n注册失败", status=500)
-
-            new_user = form.save()
-            user = auth.authenticate(username=username, password=password2)
-            auth.login(request, user)
-
-        else:
-            # 如果表单不正确,保存错误到errors列表中
-            for k, v in form.errors.items():
-                # v.as_text() 详见django.forms.util.ErrorList 中
-                errors.append(v.as_text())
-
-        mydict = {"errors": errors}
-        return HttpResponse(
-            json.dumps(mydict),
-            content_type="application/json"
-        )
+        # username = self.request.POST.get("username", "")
+        # password1 = self.request.POST.get("password1", "")
+        # password2 = self.request.POST.get("password2", "")
+        # email = self.request.POST.get("email", "")
+        #
+        # form = liuclUserCreationForm(request.POST)
+        #
+        # errors = []
+        # # 验证表单是否正确
+        # if form.is_valid():
+        #     current_site = get_current_site(request)
+        #     site_name = current_site.name
+        #     domain = current_site.domain
+        #     title = u"欢迎来到 {} ！".format(site_name)
+        #     message = "".join([
+        #         u"你好！ {} ,感谢注册 {} ！\n\n".format(username, site_name),
+        #         u"请牢记以下信息：\n",
+        #         u"用户名：{}\n".format(username),
+        #         u"邮箱：{}\n".format(email),
+        #         u"网站：http://{}\n\n".format(domain),
+        #     ])
+        #     from_email = None
+        #     try:
+        #         send_mail(title, message, from_email, [email])
+        #     except Exception as e:
+        #         logger.error(
+        #             u'[UserControl]用户注册邮件发送失败:[{}]/[{}]'.format(
+        #                 username, email
+        #             )
+        #         )
+        #         return HttpResponse(u"发送邮件错误!\n注册失败", status=500)
+        #
+        #     new_user = form.save()
+        #     user = auth.authenticate(username=username, password=password2)
+        #     auth.login(request, user)
+        #
+        # else:
+        #     # 如果表单不正确,保存错误到errors列表中
+        #     for k, v in form.errors.items():
+        #         # v.as_text() 详见django.forms.util.ErrorList 中
+        #         errors.append(v.as_text())
+        #
+        # mydict = {"errors": errors}
+        # return HttpResponse(
+        #     json.dumps(mydict),
+        #     content_type="application/json"
+        # )
+        return HttpResponse(u'暂时未开放注册', status=403)
 
     def changepassword(self, request):
         if not request.user.is_authenticated():
@@ -151,8 +152,8 @@ class UserControl(View):
 
         mydict = {"errors": errors}
         return HttpResponse(
-            json.dumps(mydict),
-            content_type="application/json"
+                json.dumps(mydict),
+                content_type="application/json"
         )
 
     def forgetpassword(self, request):
@@ -168,10 +169,10 @@ class UserControl(View):
             token_generator = default_token_generator
             from_email = None
             opts = {
-                    'token_generator': token_generator,
-                    'from_email': from_email,
-                    'request': request,
-                   }
+                'token_generator': token_generator,
+                'from_email': from_email,
+                'request': request,
+            }
             user = form.save(**opts)
 
         else:
@@ -182,8 +183,8 @@ class UserControl(View):
 
         mydict = {"errors": errors}
         return HttpResponse(
-            json.dumps(mydict),
-            content_type="application/json"
+                json.dumps(mydict),
+                content_type="application/json"
         )
 
     def resetpassword(self, request):
@@ -213,18 +214,18 @@ class UserControl(View):
 
             mydict = {"errors": errors}
             return HttpResponse(
-                json.dumps(mydict),
-                content_type="application/json"
+                    json.dumps(mydict),
+                    content_type="application/json"
             )
         else:
             logger.error(
-                u'[UserControl]用户重置密码连接错误:[{}]/[{}]'.format(
-                    uid64, token
-                )
+                    u'[UserControl]用户重置密码连接错误:[{}]/[{}]'.format(
+                            uid64, token
+                    )
             )
             return HttpResponse(
-                u"密码重设失败!\n密码重置链接无效，可能是因为它已使用。可以请求一次新的密码重置.",
-                status=403
+                    u"密码重设失败!\n密码重置链接无效，可能是因为它已使用。可以请求一次新的密码重置.",
+                    status=403
             )
 
     def changetx(self, request):
@@ -236,9 +237,9 @@ class UserControl(View):
         data = request.POST['tx']
         if not data:
             logger.error(
-                u'[UserControl]用户上传头像为空:[%s]'.format(
-                    request.user.username
-                )
+                    u'[UserControl]用户上传头像为空:[%s]'.format(
+                            request.user.username
+                    )
             )
             return HttpResponse(u"上传头像错误", status=500)
 
@@ -289,33 +290,33 @@ class UserControl(View):
             # 图片连接加上 v?时间  是因为七牛云缓存，图片不能很快的更新，
             # 用filename?v201504261312的形式来获取最新的图片
             request.user.img = "http://{}/{}?v{}".format(
-                settings.QINIU_URL,
-                filename,
-                time.strftime('%Y%m%d%H%M%S')
+                    settings.QINIU_URL,
+                    filename,
+                    time.strftime('%Y%m%d%H%M%S')
             )
             request.user.save()
 
             # 验证上传是否错误
             if ret['key'] != key or ret['hash'] != qiniu.etag(localfile):
                 logger.error(
-                    u'[UserControl]上传头像错误：[{}]'.format(
-                        request.user.username
-                    )
+                        u'[UserControl]上传头像错误：[{}]'.format(
+                                request.user.username
+                        )
                 )
                 return HttpResponse(u"上传头像错误", status=500)
 
             return HttpResponse(u"上传头像成功!\n(注意有10分钟缓存)")
 
         except Exception as e:
-            request.user.img = "/static/tx/"+filename
+            request.user.img = "/static/tx/" + filename
             request.user.save()
 
             # 验证上传是否错误
             if not os.path.exists(path):
                 logger.error(
-                    u'[UserControl]用户上传头像出错:[{}]'.format(
-                        request.user.username
-                    )
+                        u'[UserControl]用户上传头像出错:[{}]'.format(
+                                request.user.username
+                        )
                 )
                 return HttpResponse(u"上传头像错误", status=500)
 
@@ -330,7 +331,7 @@ class UserControl(View):
         notification_id = int(notification_id)
 
         notification = Notification.objects.filter(
-            pk=notification_id
+                pk=notification_id
         ).first()
 
         if notification:
@@ -342,6 +343,6 @@ class UserControl(View):
             mydict = {"url": '#'}
 
         return HttpResponse(
-            json.dumps(mydict),
-            content_type="application/json"
+                json.dumps(mydict),
+                content_type="application/json"
         )

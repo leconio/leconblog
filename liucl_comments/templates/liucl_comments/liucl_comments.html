@@ -2,81 +2,94 @@
 <div class="well">
     <div class="liucl-comment">
         <div class="liucl-comment-tx">
-            {% if user.img%}
-            <img src="{{user.img}}" width="40"></img>
-            {%else%}
-                <img src="http://liucl.qiniudn.com/image/tx/tx-default.jpg" width="40"></img>
-            {%endif%}
+            {% if user.img %}
+                <img src="{{ user.img }}" width="40">
+            {% else %}
+                <img src="http://liucl.qiniudn.com/image/tx/tx-default.jpg" width="40"/>
+            {% endif %}
         </div>
         <div class="liucl-comment-edit clearfix">
             <form id="liucl-comment-form" method="post" role="form">
                 {% csrf_token %}
-                <textarea id="comment" name="comment" class="form-control" rows="4" placeholder="请输入评论 限200字!"></textarea>
+                <textarea id="comment" name="comment" class="form-control" rows="4"
+                          placeholder="请输入评论 限200字!"></textarea>
                 <button type="submit" class="btn btn-liucl-comments pull-right">提交</button>
             </form>
         </div>
         <ul>
-            {% for comment in comment_list%}
-            <li>
-                <div class="liucl-comment-tx">
-                {% if comment.user.img %}
-                <img src={{comment.user.img}} width="40"></img>
-                {%else%}
-                    <img src="http://liucl.qiniudn.com/image/tx/tx-default.jpg" width="40"></img>
-                {%endif%}
-            </div>
-                <div class="liucl-comment-content">
-                <a><h1>{{comment.user.username}}</h1></a>
-                {% if comment.parent %}
-                <div class="comment-quote">
-                    <p>
-                        <a>@{{comment.parent.user.username}}：</a>
-                        {% autoescape on %}
-                        {{comment.parent.text}}
-                        {% endautoescape %}
-                    </p>
-                </div>
-                {% endif %}
-                <p></p>
-                <p>
-                    评论：
-                    {% autoescape on %}
-                    {{comment.text}}
-                    {% endautoescape %}
-                </p>
-                <p>{{comment.create_time|date:"Y-m-d H:i:s" }} &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <a class='quote' href="#anchor-quote" onclick="return CommentQuote('{{comment.user.username}}',{{comment.id}});">回复</a></p>
-            </div>
-            </li>
-            {% endfor%}
+            {% for comment in comment_list %}
+                <li>
+                    <div class="liucl-comment-tx">
+                        {% if comment.user.img %}
+                            <img src={{ comment.user.img }} width="40">
+                        {% else %}
+                            <img src="http://liucl.qiniudn.com/image/tx/tx-default.jpg" width="40">
+                        {% endif %}
+                    </div>
+                    <a><h1>{{ comment.user.isAnonymous }}</h1></a>
+                    <div class="liucl-comment-content">
+                        {% if comment.isAnonymous %}
+                            <a><h1>{{ comment.from_ip }}</h1></a>
+                        {% else %}
+                            <a><h1>{{ comment.user.username }}</h1></a>
+                        {% endif %}
+                        {% if comment.parent %}
+                            <div class="comment-quote">
+                                <p>
+                                    <a>@{{ comment.parent.user.username }}：</a>
+                                    {% autoescape on %}
+                                        {{ comment.parent.text }}
+                                    {% endautoescape %}
+                                </p>
+                            </div>
+                        {% endif %}
+                        <p></p>
+                        <p>
+                            评论：
+                            {% autoescape on %}
+                                {{ comment.text }}
+                            {% endautoescape %}
+                        </p>
+                        <p>{{ comment.create_time|date:"Y-m-d H:i:s" }} &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            {% if not comment.isAnonymous %}
+                                <a class='quote' href="#anchor-quote"
+                                   onclick="return CommentQuote('{{ comment.user.username }}',{{ comment.id }});">回复</a>
+                            {% endif %}
+                        </p>
+                    </div>
+                </li>
+            {% endfor %}
         </ul>
     </div>
 </div>
 <script language="javascript" type="text/javascript">
-    function CommentQuote(user_name, commend_id){
+    function CommentQuote(user_name, commend_id) {
         comment = document.getElementById('comment');
-        comment.value = "@['"+user_name+"', "+commend_id+"]: ";
-        comment.focus();;
+        comment.value = "@['" + user_name + "', " + commend_id + "]: ";
+        comment.focus();
+        ;
         comment.setSelectionRange(comment.value.length, comment.value.length);
-    };
+    }
+    ;
 
     $('#liucl-comment-form').submit(function () {
         $.ajax({
-            type:"POST",
-            url:"/comment/{{article.en_title}}",
-            data:{"comment":$("#comment").val()},
-            beforeSend:function(xhr){
-                xhr.setRequestHeader("X-CSRFToken", $.cookie('csrftoken'));  
+            type: "POST",
+            url: "/comment/{{article.en_title}}",
+            data: {"comment": $("#comment").val()},
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader("X-CSRFToken", $.cookie('csrftoken'));
             },
-            success:function(data,textStatus){
+            success: function (data, textStatus) {
                 $("#comment").val("");
                 $(".liucl-comment ul").prepend(data);
             },
-            error:function(XMLHttpRequest, textStatus, errorThrown){
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
                 alert(XMLHttpRequest.responseText);
 
             }
 
         });
         return false;
-    }); 
+    });
 </script>

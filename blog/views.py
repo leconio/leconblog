@@ -114,8 +114,8 @@ class ArticleView(BaseMixin, DetailView):
     def get_context_data(self, **kwargs):
         # 评论
         en_title = self.kwargs.get('slug', '')
-        kwargs['comment_list'] = \
-            self.queryset.get(en_title=en_title).comment_set.all()
+        kwargs['comment_list'] = self.queryset.get(en_title=en_title).comment_set.all()
+
         return super(ArticleView, self).get_context_data(**kwargs)
 
     def get_object(self, queryset=None):

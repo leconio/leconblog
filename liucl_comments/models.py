@@ -3,6 +3,7 @@ from django.db import models
 from django.conf import settings
 from blog.models import Article
 
+
 # Create your models here.
 
 
@@ -28,6 +29,8 @@ class Comment(models.Model):
 
     parent = models.ForeignKey('self', default=None, blank=True, null=True,
                                verbose_name=u'引用')
+    isAnonymous = models.BooleanField(default=False)
+    from_ip = models.CharField(default='127.0.0.1', max_length=20, verbose_name='ip')
 
     class Meta:
         verbose_name_plural = verbose_name = u'评论'
