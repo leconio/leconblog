@@ -7,7 +7,7 @@ body {
     font-family: Lato, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
     color: #6B6B6B;
     font-size: 16px;
-    background: url('../img/bg.jpg') repeat scroll 0% 0% transparent;
+    background: url('../img/bg.jpg') repeat scroll gainsboro;
     /*background-color: #ded5c6;*/
 }
 
@@ -66,12 +66,12 @@ a {
 }
 
 a:focus {
-    color: #D9534F;
+    color: #5cb85c;
     text-decoration: none;
 }
 
 a:hover {
-    color: #D9534F;
+    color: #5cb85c;
     text-decoration: none;
 }
 
@@ -135,13 +135,13 @@ footer {
 /*按钮样式*/
 .btn-liucl {
     color: #FFF;
-    background-color: #3b98ca;
-    border-color: #4997d4;
+    background-color: #5cb85c;
+    border-color: #4c984c;
 }
 
 .btn-detail {
-    margin-top: 140px;
-    margin-right: 20px;
+    /*margin-top: 45px;*/
+    /*margin-right: 10px;*/
 }
 
 /*label样式*/
@@ -246,24 +246,24 @@ footer {
 }
 
 .pagination-liuck .myactive a {
-    background-color: #D9534F;
+    background-color: #5cb85c;
     color: #FFF;
 }
 
 .pagination-liuck li a {
     font-weight: bold;
-    border: 2px solid #D9534F;
+    border: 2px solid #5cb85c;
     border-radius: 4px;
     color: #666;
 }
 
 .pagination-liuck > li > a:hover {
-    background-color: #D9534F;
+    background-color: #5cb85c;
     color: #FFF;
 }
 
 .pagination-liuck > li > a:focus {
-    background-color: #D9534F;
+    background-color: #5cb85c;
 }
 
 /********************************/
@@ -303,7 +303,7 @@ footer {
 .home-post {
     position: relative;
     margin-bottom: 30px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     display: block;
 }
 
@@ -335,13 +335,19 @@ footer {
     font-size: 14px;
 }
 
+.post-desc {
+    text-align: justify;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
 .home-post .post-content .thumbnail {
     border: 1px solid #ED9C29;
     padding: 0px;
 }
 
 .home-post .post-info {
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .home-post .post-info > span {
@@ -527,11 +533,11 @@ footer {
 }
 
 .tags label.active:hover {
-    background: #D94600;
+    background: #5cb85c;
 }
 
 .tags .active {
-    background: #D94600;
+    background: #5cb85c;
     color: #FFF;
 }
 
