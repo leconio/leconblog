@@ -5,8 +5,10 @@
 /*按钮样式*/
 .btn-liucl-comments {
     color: #FFF;
-    background-color: #D9534F;
-    border-color: #D43F3A;
+    width: 100px;
+    margin-right: 10px;
+    background-color: #5cc26f;
+    border-color: #5cc26f;
 }
 
 /*panel 样式*/

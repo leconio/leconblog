@@ -20,7 +20,11 @@
             </div>
             <div class="comment-info">
                 <div class="comment-username">
-                    <a href="#">{{comment.user.username}} 评论:</a>
+                    {% if comment.isAnonymous %}
+                        <a>{{ comment.from_ip }}评论:</a>
+                    {% else %}
+                        <a>{{ comment.user.username }}评论:</a>
+                    {% endif %}
                 </div>
                 <div class="comment-content">
                     <a href="{% url 'article-detail-view' comment.article.en_title%}">
