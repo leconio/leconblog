@@ -6,6 +6,7 @@
         padding: 10px;
         line-height: 180%;
         box-shadow: 0px 0px 5px #C2C2C2;
+        width: 20%;
     }
 
     .BlogAnchor p {
@@ -44,11 +45,13 @@
     }
 </style>
 
-<div class="panel panel-default BlogAnchor">
+<div class="BlogAnchor panel panel-default">
     <p>
         <b id="AnchorContentToggle" title="收起" style="cursor:pointer;">文章导航[-]</b>
     </p>
+    {#    <ul>#}
     <div class="AnchorContent" id="AnchorContent"></div>
+    {#    </ul>#}
 </div>
 
 <script>
@@ -58,9 +61,7 @@
         $(item).attr("id", "wow" + i);
         $("#AnchorContent").append(
                 '<li style="list-style:none;overflow:hidden;text-overflow:ellipsis; -o-text-overflow:ellipsis;white-space:nowrap;width:100%">' +
-                '<a class="new' + tag + ' anchor-link" href="#wow' + i + '">' + (i + 1) +
-                " · " +
-                $(this).text() + '</a></li>');
+                '<a class="new' + tag + ' anchor-link" href="#wow' + i + '">' + $(this).text() + '</a></li>');
         $(".newh2").css("margin-left", 0);
         $(".newh3").css("margin-left", 20);
         $(".newh4").css("margin-left", 40);
