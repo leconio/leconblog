@@ -78,3 +78,88 @@ CREATE INDEX `blog_column_article_e669cc35` ON `blog_column_article` (`article_i
 CREATE INDEX `blog_carousel_e669cc35` ON `blog_carousel` (`article_id`);
 
 COMMIT;
+BEGIN;
+CREATE TABLE `liucl_auth_liucluser_groups` (
+  `id`           INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  `liucluser_id` INTEGER                NOT NULL,
+  `group_id`     INTEGER                NOT NULL,
+  UNIQUE (`liucluser_id`, `group_id`)
+);
+ALTER TABLE `liucl_auth_liucluser_groups` ADD CONSTRAINT `group_id_refs_id_42c7db63` FOREIGN KEY (`group_id`) REFERENCES `auth_group` (`id`);
+CREATE TABLE `liucl_auth_liucluser_user_permissions` (
+  `id`            INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  `liucluser_id`  INTEGER                NOT NULL,
+  `permission_id` INTEGER                NOT NULL,
+  UNIQUE (`liucluser_id`, `permission_id`)
+);
+ALTER TABLE `liucl_auth_liucluser_user_permissions` ADD CONSTRAINT `permission_id_refs_id_e0913cbf` FOREIGN KEY (`permission_id`) REFERENCES `auth_permission` (`id`);
+CREATE TABLE `liucl_auth_liucluser` (
+  `id`           INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  `password`     VARCHAR(128)           NOT NULL,
+  `last_login`   DATETIME(6),
+  `is_superuser` BOOL                   NOT NULL,
+  `username`     VARCHAR(30)            NOT NULL UNIQUE,
+  `first_name`   VARCHAR(30)            NOT NULL,
+  `last_name`    VARCHAR(30)            NOT NULL,
+  `email`        VARCHAR(254)           NOT NULL,
+  `is_staff`     BOOL                   NOT NULL,
+  `is_active`    BOOL                   NOT NULL,
+  `date_joined`  DATETIME(6)            NOT NULL,
+  `img`          VARCHAR(200)           NOT NULL,
+  `intro`        VARCHAR(200)
+);
+ALTER TABLE `liucl_auth_liucluser_groups` ADD CONSTRAINT `liucluser_id_refs_id_179003ba` FOREIGN KEY (`liucluser_id`) REFERENCES `liucl_auth_liucluser` (`id`);
+ALTER TABLE `liucl_auth_liucluser_user_permissions` ADD CONSTRAINT `liucluser_id_refs_id_23e7ea50` FOREIGN KEY (`liucluser_id`) REFERENCES `liucl_auth_liucluser` (`id`);
+CREATE INDEX `liucl_auth_liucluser_groups_ac5ca68c` ON `liucl_auth_liucluser_groups` (`liucluser_id`);
+CREATE INDEX `liucl_auth_liucluser_groups_5f412f9a` ON `liucl_auth_liucluser_groups` (`group_id`);
+CREATE INDEX `liucl_auth_liucluser_user_permissions_ac5ca68c` ON `liucl_auth_liucluser_user_permissions` (`liucluser_id`);
+CREATE INDEX `liucl_auth_liucluser_user_permissions_83d7f98b` ON `liucl_auth_liucluser_user_permissions` (`permission_id`);
+
+COMMIT;
+BEGIN;
+CREATE TABLE `liucl_comments_comment` (
+  `id`          INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  `user_id`     INTEGER                NOT NULL,
+  `article_id`  INTEGER                NOT NULL,
+  `text`        LONGTEXT               NOT NULL,
+  `create_time` DATETIME(6)            NOT NULL,
+  `parent_id`   INTEGER,
+  `isAnonymous` BOOL                   NOT NULL,
+  `from_ip`     VARCHAR(20)            NOT NULL
+);
+ALTER TABLE `liucl_comments_comment` ADD CONSTRAINT `user_id_refs_id_bf1d52e0` FOREIGN KEY (`user_id`) REFERENCES `liucl_auth_liucluser` (`id`);
+ALTER TABLE `liucl_comments_comment` ADD CONSTRAINT `article_id_refs_id_8c678832` FOREIGN KEY (`article_id`) REFERENCES `blog_article` (`id`);
+ALTER TABLE `liucl_comments_comment` ADD CONSTRAINT `parent_id_refs_id_8997b32b` FOREIGN KEY (`parent_id`) REFERENCES `liucl_comments_comment` (`id`);
+CREATE INDEX `liucl_comments_comment_6340c63c` ON `liucl_comments_comment` (`user_id`);
+CREATE INDEX `liucl_comments_comment_e669cc35` ON `liucl_comments_comment` (`article_id`);
+CREATE INDEX `liucl_comments_comment_410d0aac` ON `liucl_comments_comment` (`parent_id`);
+
+COMMIT;
+
+BEGIN;
+CREATE TABLE `liucl_system_notification` (
+  `id`           INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  `title`        VARCHAR(100)           NOT NULL,
+  `text`         LONGTEXT               NOT NULL,
+  `url`          VARCHAR(200),
+  `from_user_id` INTEGER,
+  `to_user_id`   INTEGER                NOT NULL,
+  `type`         VARCHAR(20),
+  `is_read`      INTEGER                NOT NULL,
+  `create_time`  DATETIME(6)            NOT NULL,
+  `update_time`  DATETIME(6)            NOT NULL
+);
+ALTER TABLE `liucl_system_notification` ADD CONSTRAINT `from_user_id_refs_id_540892ff` FOREIGN KEY (`from_user_id`) REFERENCES `liucl_auth_liucluser` (`id`);
+ALTER TABLE `liucl_system_notification` ADD CONSTRAINT `to_user_id_refs_id_540892ff` FOREIGN KEY (`to_user_id`) REFERENCES `liucl_auth_liucluser` (`id`);
+CREATE TABLE `liucl_system_link` (
+  `id`          INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  `title`       VARCHAR(100)           NOT NULL,
+  `url`         VARCHAR(200),
+  `type`        VARCHAR(20),
+  `create_time` DATETIME(6)            NOT NULL,
+  `update_time` DATETIME(6)            NOT NULL
+);
+CREATE INDEX `liucl_system_notification_0e7efed3` ON `liucl_system_notification` (`from_user_id`);
+CREATE INDEX `liucl_system_notification_bc172800` ON `liucl_system_notification` (`to_user_id`);
+
+COMMIT;
