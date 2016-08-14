@@ -1325,3 +1325,1622 @@ Traceback (most recent call last):
   File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/engine.py", line 146, in find_template
     raise TemplateDoesNotExist(name)
 django.template.base.TemplateDoesNotExist: ./liucl_auth/notification.html
+[2016-08-12 12:34:24,569] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 12:48:04,881] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 12:48:04,882] [ERROR] base : Internal Server Error: /comment/package2
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 36, in post
+    if request.META.has_key('HTTP_X_FORWARDED_FOR'):
+AttributeError: 'dict' object has no attribute 'has_key'
+[2016-08-12 12:48:04,882] [ERROR] base : Internal Server Error: /comment/package2
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 36, in post
+    if request.META.has_key('HTTP_X_FORWARDED_FOR'):
+AttributeError: 'dict' object has no attribute 'has_key'
+[2016-08-12 12:50:34,424] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 12:50:34,426] [ERROR] base : Internal Server Error: /comment/package2
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 85, in post
+    parent=parent
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/fields/related.py", line 627, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x10450e2b0>>": "Comment.user" must be a "liuclUser" instance.
+[2016-08-12 12:50:34,426] [ERROR] base : Internal Server Error: /comment/package2
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 85, in post
+    parent=parent
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/fields/related.py", line 627, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x10450e2b0>>": "Comment.user" must be a "liuclUser" instance.
+[2016-08-12 12:51:59,656] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 12:51:59,656] [INFO] views : 127.0.0.1
+[2016-08-12 12:51:59,659] [ERROR] base : Internal Server Error: /comment/package2
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 86, in post
+    parent=parent
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/fields/related.py", line 627, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x10440db38>>": "Comment.user" must be a "liuclUser" instance.
+[2016-08-12 12:51:59,659] [ERROR] base : Internal Server Error: /comment/package2
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 86, in post
+    parent=parent
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/fields/related.py", line 627, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x10440db38>>": "Comment.user" must be a "liuclUser" instance.
+[2016-08-12 14:48:17,044] [ERROR] base : Internal Server Error: /article/package2.html
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: liucl_comments_comment.isAnonymous
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 164, in get_response
+    response = response.render()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/response.py", line 158, in render
+    self.content = self.rendered_content
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 159, in render
+    return template.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 211, in render
+    return self._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/defaulttags.py", line 162, in render
+    len_values = len(values)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 144, in __len__
+    self._fetch_all()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: liucl_comments_comment.isAnonymous
+[2016-08-12 14:48:17,044] [ERROR] base : Internal Server Error: /article/package2.html
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: liucl_comments_comment.isAnonymous
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 164, in get_response
+    response = response.render()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/response.py", line 158, in render
+    self.content = self.rendered_content
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 159, in render
+    return template.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 211, in render
+    return self._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/defaulttags.py", line 162, in render
+    len_values = len(values)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 144, in __len__
+    self._fetch_all()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: liucl_comments_comment.isAnonymous
+[2016-08-12 14:49:01,750] [ERROR] base : Internal Server Error: /article/package2.html
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: liucl_comments_comment.isAnonymous
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 164, in get_response
+    response = response.render()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/response.py", line 158, in render
+    self.content = self.rendered_content
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 159, in render
+    return template.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 211, in render
+    return self._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/defaulttags.py", line 162, in render
+    len_values = len(values)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 144, in __len__
+    self._fetch_all()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: liucl_comments_comment.isAnonymous
+[2016-08-12 14:49:01,750] [ERROR] base : Internal Server Error: /article/package2.html
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: liucl_comments_comment.isAnonymous
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 164, in get_response
+    response = response.render()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/response.py", line 158, in render
+    self.content = self.rendered_content
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 159, in render
+    return template.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 211, in render
+    return self._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/defaulttags.py", line 162, in render
+    len_values = len(values)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 144, in __len__
+    self._fetch_all()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: liucl_comments_comment.isAnonymous
+[2016-08-12 16:11:18,013] [ERROR] base : Internal Server Error: /article/package2.html
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: liucl_comments_comment.isAnonymous
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 164, in get_response
+    response = response.render()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/response.py", line 158, in render
+    self.content = self.rendered_content
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 159, in render
+    return template.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 211, in render
+    return self._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/defaulttags.py", line 162, in render
+    len_values = len(values)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 144, in __len__
+    self._fetch_all()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: liucl_comments_comment.isAnonymous
+[2016-08-12 16:11:18,013] [ERROR] base : Internal Server Error: /article/package2.html
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: liucl_comments_comment.isAnonymous
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 164, in get_response
+    response = response.render()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/response.py", line 158, in render
+    self.content = self.rendered_content
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 159, in render
+    return template.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 211, in render
+    return self._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/defaulttags.py", line 162, in render
+    len_values = len(values)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 144, in __len__
+    self._fetch_all()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: liucl_comments_comment.isAnonymous
+[2016-08-12 17:03:27,826] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 17:03:27,828] [INFO] views : 127.0.0.1
+[2016-08-12 17:03:27,833] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 87, in post
+    isAnonymous=user.username.startswith('ip:')
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/fields/related.py", line 627, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x1047e1dd8>>": "Comment.user" must be a "liuclUser" instance.
+[2016-08-12 17:03:27,833] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 87, in post
+    isAnonymous=user.username.startswith('ip:')
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/fields/related.py", line 627, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x1047e1dd8>>": "Comment.user" must be a "liuclUser" instance.
+[2016-08-12 17:04:53,371] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 17:04:53,371] [INFO] views : 127.0.0.1
+[2016-08-12 17:04:53,374] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: liucl_comments_comment.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 87, in post
+    isAnonymous=user.username.startswith('ip:')
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 348, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 710, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 738, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 822, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 861, in _do_insert
+    using=using, raw=raw)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 963, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: liucl_comments_comment.user_id
+[2016-08-12 17:04:53,374] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: liucl_comments_comment.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 87, in post
+    isAnonymous=user.username.startswith('ip:')
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 348, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 710, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 738, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 822, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 861, in _do_insert
+    using=using, raw=raw)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 963, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: liucl_comments_comment.user_id
+[2016-08-12 17:13:02,712] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 28, in post
+    logger(user)
+TypeError: 'Logger' object is not callable
+[2016-08-12 17:13:02,712] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 28, in post
+    logger(user)
+TypeError: 'Logger' object is not callable
+[2016-08-12 17:13:31,722] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 17:13:31,725] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 90, in post
+    isAnonymous=user.username.startswith('ip:')
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/fields/related.py", line 627, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x10450dbe0>>": "Comment.user" must be a "liuclUser" instance.
+[2016-08-12 17:13:31,725] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 90, in post
+    isAnonymous=user.username.startswith('ip:')
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/fields/related.py", line 627, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x10450dbe0>>": "Comment.user" must be a "liuclUser" instance.
+[2016-08-12 17:16:53,956] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 17:16:53,958] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 89, in post
+    isAnonymous=user.username.startswith('ip:')
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/fields/related.py", line 627, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x10450da20>>": "Comment.user" must be a "liuclUser" instance.
+[2016-08-12 17:16:53,958] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 89, in post
+    isAnonymous=user.username.startswith('ip:')
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/fields/related.py", line 627, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x10450da20>>": "Comment.user" must be a "liuclUser" instance.
+[2016-08-12 17:17:54,919] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 17:17:54,922] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 91, in post
+    isAnonymous=isAnonymous
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/fields/related.py", line 627, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x1046e8748>>": "Comment.user" must be a "liuclUser" instance.
+[2016-08-12 17:17:54,922] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 91, in post
+    isAnonymous=isAnonymous
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/fields/related.py", line 627, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x1046e8748>>": "Comment.user" must be a "liuclUser" instance.
+[2016-08-12 17:24:29,177] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 17:24:29,177] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 90, in post
+    isAnonymous=isAnonymous
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/fields/related.py", line 619, in __set__
+    (instance._meta.object_name, self.field.name)
+ValueError: Cannot assign None: "Comment.user" does not allow null values.
+[2016-08-12 17:24:29,177] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 90, in post
+    isAnonymous=isAnonymous
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/fields/related.py", line 619, in __set__
+    (instance._meta.object_name, self.field.name)
+ValueError: Cannot assign None: "Comment.user" does not allow null values.
+[2016-08-12 17:27:36,594] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 17:27:36,596] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 49, in post
+    logger('未登陆用户')
+TypeError: 'Logger' object is not callable
+[2016-08-12 17:27:36,596] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 49, in post
+    logger('未登陆用户')
+TypeError: 'Logger' object is not callable
+[2016-08-12 17:28:39,681] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 17:28:48,847] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 49, in post
+    logger('未登陆用户')
+TypeError: 'Logger' object is not callable
+[2016-08-12 17:28:48,847] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 49, in post
+    logger('未登陆用户')
+TypeError: 'Logger' object is not callable
+[2016-08-12 17:29:27,259] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 17:29:27,262] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 90, in post
+    isAnonymous=isAnonymous
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/fields/related.py", line 668, in __set__
+    (value, self.field.rel.to._meta.object_name)
+ValueError: Cannot assign "<liuclUser: ip:127.0.0.1>": "liuclUser" instance isn't saved in the database.
+[2016-08-12 17:29:27,262] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 90, in post
+    isAnonymous=isAnonymous
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/fields/related.py", line 668, in __set__
+    (value, self.field.rel.to._meta.object_name)
+ValueError: Cannot assign "<liuclUser: ip:127.0.0.1>": "liuclUser" instance isn't saved in the database.
+[2016-08-12 17:30:30,096] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 17:30:30,100] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: liucl_comments_comment.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 89, in post
+    isAnonymous=isAnonymous
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 348, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 710, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 738, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 822, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 861, in _do_insert
+    using=using, raw=raw)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 963, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: liucl_comments_comment.user_id
+[2016-08-12 17:30:30,100] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: liucl_comments_comment.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 89, in post
+    isAnonymous=isAnonymous
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 348, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 710, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 738, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 822, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 861, in _do_insert
+    using=using, raw=raw)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 963, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: liucl_comments_comment.user_id
+[2016-08-12 17:36:55,900] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 17:36:55,901] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 90, in post
+    isAnonymous=isAnonymous
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/fields/related.py", line 668, in __set__
+    (value, self.field.rel.to._meta.object_name)
+ValueError: Cannot assign "<liuclUser: ip:127.0.0.1>": "liuclUser" instance isn't saved in the database.
+[2016-08-12 17:36:55,901] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 90, in post
+    isAnonymous=isAnonymous
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/fields/related.py", line 668, in __set__
+    (value, self.field.rel.to._meta.object_name)
+ValueError: Cannot assign "<liuclUser: ip:127.0.0.1>": "liuclUser" instance isn't saved in the database.
+[2016-08-12 17:47:15,710] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 17:47:15,719] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 94, in post
+    isAnonymous=isAnonymous
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/fields/related.py", line 627, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "[<liuclUser: yiming>]": "Comment.user" must be a "liuclUser" instance.
+[2016-08-12 17:47:15,719] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 94, in post
+    isAnonymous=isAnonymous
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/fields/related.py", line 627, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "[<liuclUser: yiming>]": "Comment.user" must be a "liuclUser" instance.
+[2016-08-12 17:48:32,239] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 17:49:13,909] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 17:50:41,354] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 17:50:41,357] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 94, in post
+    isAnonymous=isAnonymous
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/fields/related.py", line 627, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "[<liuclUser: yiming>]": "Comment.user" must be a "liuclUser" instance.
+[2016-08-12 17:50:41,357] [ERROR] base : Internal Server Error: /comment/test11
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/code/python/liuclblog/liucl_comments/views.py", line 94, in post
+    isAnonymous=isAnonymous
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/fields/related.py", line 627, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "[<liuclUser: yiming>]": "Comment.user" must be a "liuclUser" instance.
+[2016-08-12 17:55:34,647] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 17:56:24,112] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 18:03:24,455] [ERROR] base : Internal Server Error: /article/test11.html
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: liucl_comments_comment.from_ip
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 164, in get_response
+    response = response.render()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/response.py", line 158, in render
+    self.content = self.rendered_content
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 159, in render
+    return template.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 211, in render
+    return self._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/defaulttags.py", line 162, in render
+    len_values = len(values)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 144, in __len__
+    self._fetch_all()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: liucl_comments_comment.from_ip
+[2016-08-12 18:03:24,455] [ERROR] base : Internal Server Error: /article/test11.html
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: liucl_comments_comment.from_ip
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 164, in get_response
+    response = response.render()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/response.py", line 158, in render
+    self.content = self.rendered_content
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 159, in render
+    return template.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 211, in render
+    return self._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/defaulttags.py", line 162, in render
+    len_values = len(values)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 144, in __len__
+    self._fetch_all()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: liucl_comments_comment.from_ip
+[2016-08-12 18:16:28,887] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 18:16:38,485] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 18:20:18,928] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-12 18:33:21,071] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-13 19:55:16,491] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-14 09:40:53,316] [ERROR] base : Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/cursors.py", line 167, in execute
+    result = self._query(query)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/cursors.py", line 323, in _query
+    conn.query(q)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/connections.py", line 836, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/connections.py", line 1020, in _read_query_result
+    result.read()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/connections.py", line 1303, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/connections.py", line 982, in _read_packet
+    packet.check_error()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/connections.py", line 394, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/err.py", line 120, in raise_mysql_exception
+    _check_mysql_exception(errinfo)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/err.py", line 112, in _check_mysql_exception
+    raise errorclass(errno, errorvalue)
+pymysql.err.ProgrammingError: (1146, "Table 'blog.django_session' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 394, in login
+    return login(request, **defaults)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/decorators/debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/utils/decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/contrib/auth/views.py", line 51, in login
+    auth_login(request, form.get_user())
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/contrib/auth/__init__.py", line 110, in login
+    request.session.cycle_key()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/contrib/sessions/backends/base.py", line 285, in cycle_key
+    self.create()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/contrib/sessions/backends/db.py", line 37, in create
+    self._session_key = self._get_new_session_key()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/contrib/sessions/backends/base.py", line 155, in _get_new_session_key
+    if not self.exists(session_key):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/contrib/sessions/backends/db.py", line 33, in exists
+    return Session.objects.filter(session_key=session_key).exists()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 586, in exists
+    return self.query.has_results(using=self.db)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/sql/query.py", line 479, in has_results
+    return compiler.has_results()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 800, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/cursors.py", line 167, in execute
+    result = self._query(query)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/cursors.py", line 323, in _query
+    conn.query(q)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/connections.py", line 836, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/connections.py", line 1020, in _read_query_result
+    result.read()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/connections.py", line 1303, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/connections.py", line 982, in _read_packet
+    packet.check_error()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/connections.py", line 394, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/err.py", line 120, in raise_mysql_exception
+    _check_mysql_exception(errinfo)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/err.py", line 112, in _check_mysql_exception
+    raise errorclass(errno, errorvalue)
+django.db.utils.ProgrammingError: (1146, "Table 'blog.django_session' doesn't exist")
+[2016-08-14 09:40:53,316] [ERROR] base : Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/cursors.py", line 167, in execute
+    result = self._query(query)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/cursors.py", line 323, in _query
+    conn.query(q)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/connections.py", line 836, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/connections.py", line 1020, in _read_query_result
+    result.read()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/connections.py", line 1303, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/connections.py", line 982, in _read_packet
+    packet.check_error()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/connections.py", line 394, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/err.py", line 120, in raise_mysql_exception
+    _check_mysql_exception(errinfo)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/err.py", line 112, in _check_mysql_exception
+    raise errorclass(errno, errorvalue)
+pymysql.err.ProgrammingError: (1146, "Table 'blog.django_session' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 394, in login
+    return login(request, **defaults)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/decorators/debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/utils/decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/contrib/auth/views.py", line 51, in login
+    auth_login(request, form.get_user())
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/contrib/auth/__init__.py", line 110, in login
+    request.session.cycle_key()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/contrib/sessions/backends/base.py", line 285, in cycle_key
+    self.create()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/contrib/sessions/backends/db.py", line 37, in create
+    self._session_key = self._get_new_session_key()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/contrib/sessions/backends/base.py", line 155, in _get_new_session_key
+    if not self.exists(session_key):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/contrib/sessions/backends/db.py", line 33, in exists
+    return Session.objects.filter(session_key=session_key).exists()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/query.py", line 586, in exists
+    return self.query.has_results(using=self.db)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/sql/query.py", line 479, in has_results
+    return compiler.has_results()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 800, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/cursors.py", line 167, in execute
+    result = self._query(query)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/cursors.py", line 323, in _query
+    conn.query(q)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/connections.py", line 836, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/connections.py", line 1020, in _read_query_result
+    result.read()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/connections.py", line 1303, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/connections.py", line 982, in _read_packet
+    packet.check_error()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/connections.py", line 394, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/err.py", line 120, in raise_mysql_exception
+    _check_mysql_exception(errinfo)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/pymysql/err.py", line 112, in _check_mysql_exception
+    raise errorclass(errno, errorvalue)
+django.db.utils.ProgrammingError: (1146, "Table 'blog.django_session' doesn't exist")
+[2016-08-14 09:45:08,358] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-14 09:45:24,026] [ERROR] views : [CommentControl]当前用户非活动用户:[]
+[2016-08-14 10:10:03,321] [ERROR] base : Internal Server Error: /all/
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 164, in get_response
+    response = response.render()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/response.py", line 158, in render
+    self.content = self.rendered_content
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/defaulttags.py", line 576, in render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 151, in render
+    template = context.template.engine.get_template(template)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/engine.py", line 146, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: ./blog/include/host_post.html
+[2016-08-14 10:10:03,321] [ERROR] base : Internal Server Error: /all/
+Traceback (most recent call last):
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/core/handlers/base.py", line 164, in get_response
+    response = response.render()
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/response.py", line 158, in render
+    self.content = self.rendered_content
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/defaulttags.py", line 576, in render
+    return self.nodelist.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/loader_tags.py", line 151, in render
+    template = context.template.engine.get_template(template)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/Users/apple/code/python/virtualsys/blog/lib/python3.5/site-packages/django/template/engine.py", line 146, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: ./blog/include/host_post.html

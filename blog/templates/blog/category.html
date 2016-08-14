@@ -6,8 +6,8 @@
         <div id="all-post-list" class="well">
             {% if article_list %}
             {% with post_list=article_list %}
-            {% for post in post_list %} 
-                {% include "./blog/include/category_post.html"%}
+            {% for post in post_list %}
+                {% include "./blog/include/home_post.html" %}
             {% endfor %}
             {% endwith %}
             {% endif %}
@@ -19,7 +19,7 @@
         {% endif %}
     </div>
     <div id="liucl-side" class="col-md-4 col-lg-3 hidden-xs">
-        {% include "./blog/widgets/tags_cloud.html"%}
+        {#        {% include "./blog/widgets/tags_cloud.html"%}#}
         {% include "./blog/widgets/search.html"%}
         {% include "./blog/widgets/hotest_posts.html"%}
         {% include "./liucl_comments/latest_comments.html" %}

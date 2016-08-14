@@ -4,12 +4,12 @@
 
 <div class="row">
     <div id="liucl-content" class="col-md-8 col-lg-9">
-        <div id="all-post-list" class="well">
+        <div id="all-post-list">
 
             {% if article_list %}
             {% with post_list=article_list %}
-            {% for post in post_list %} 
-                {% include "./blog/include/search_post.html"%}
+            {% for post in post_list %}
+                {% include "./blog/include/home_post.html" %}
             {% endfor %}
             {% endwith %}
             {% endif %}
@@ -44,7 +44,6 @@
 
     </div>
     <div id="liucl-side" class="col-md-4 col-lg-3 hidden-xs">
-        {% include "./blog/widgets/tags_cloud.html"%}
         {% include "./blog/widgets/search.html"%}
         {% include "./blog/widgets/hotest_posts.html"%}
         {% include "./liucl_comments/latest_comments.html" %}

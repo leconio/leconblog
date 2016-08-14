@@ -1,3 +1,4 @@
+pymysql
 Django==1.8
 Pillow==3.1.1
 qiniu==7.0.5

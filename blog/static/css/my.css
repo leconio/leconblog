@@ -98,7 +98,8 @@ a:hover {
 }
 
 footer {
-    padding: 40px 0;
+    height: auto;
+    padding: 20px 0;
     color: #fff;
     text-align: center;
     background-color: #222;
@@ -136,12 +137,19 @@ footer {
 .btn-liucl {
     color: #FFF;
     background-color: #5cb85c;
-    border-color: #4c984c;
+    border-color: #5cb85c;
 }
 
 .btn-detail {
     /*margin-top: 45px;*/
-    /*margin-right: 10px;*/
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: right;
+}
+
+.article-tags {
+    float: left;
+    margin-bottom: 10px;
 }
 
 /*label样式*/
@@ -194,7 +202,7 @@ footer {
 }
 
 .panel-liucl .badge {
-    background-color: #3b98ca;
+    background-color: #5cb85c;
 }
 
 .panel-liucl span.btn {
@@ -342,7 +350,7 @@ footer {
 }
 
 .home-post .post-content .thumbnail {
-    border: 1px solid #ED9C29;
+    border: none;
     padding: 0px;
 }
 
@@ -623,7 +631,6 @@ footer {
 }
 
 /*********************/
-
 #links a {
     margin-bottom: 5px;
 }
@@ -633,3 +640,8 @@ footer {
     position: fixed;
     bottom: 120px;
 }
+
+.img-circle {
+    border-radius: 5%;
+}
+
