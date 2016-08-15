@@ -92,7 +92,7 @@ class CommentControl(View):
                 text=text,
                 parent=parent,
                 isAnonymous=is_anonymous,
-                from_ip=u'来自' + ip
+                from_ip=u'来自 : ' + ip
         )
 
         try:
