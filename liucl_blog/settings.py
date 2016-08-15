@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'p1p2e^77+6ex*1@-s6hzcx7l3bx#g2q0w1za1c-x-1p@n6z^x*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -207,7 +207,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp-mail.outlook.com'  # SMTP地址 例如: smtp.163.com
 EMAIL_PORT = 587  # SMTP端口 例如: 25
 EMAIL_HOST_USER = 'aabbcclcl@hotmail.com'  # 我自己的邮箱 例如: xxxxxx@163.com
-EMAIL_HOST_PASSWORD = 'CLLWD123'  # 我的邮箱密码 例如  xxxxxxxxx
+EMAIL_HOST_PASSWORD = ''  # 我的邮箱密码 例如  xxxxxxxxx
 EMAIL_SUBJECT_PREFIX = u'liucl'  # 为邮件Subject-line前缀,默认是'[django]'
 EMAIL_USE_TLS = True  # 与SMTP服务器通信时，是否启动TLS链接(安全链接)。默认是false
 
