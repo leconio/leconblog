@@ -92,7 +92,7 @@ class CommentControl(View):
                 text=text,
                 parent=parent,
                 isAnonymous=is_anonymous,
-                from_ip=u'来自 : ' + ip
+                from_ip=ip
         )
 
         try:
@@ -114,7 +114,7 @@ class CommentControl(View):
         # 返回当前评论
         _from = comment.user.username
         if is_anonymous:
-            _from = u'来自' + ip
+            _from = u'来自网友 : ' + ip
         html = u"<li>\
                     <div class=\"liucl-comment-tx\">\
                         <img src={} width=\"40\"></img>\
