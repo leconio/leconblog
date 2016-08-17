@@ -28,7 +28,7 @@
                     </div>
                     <div class="liucl-comment-content">
                         {% if comment.isAnonymous %}
-                            <a><h1>{{ comment.from_ip }}</h1></a>
+                            <a><h1>来自网友 : {{ comment.from_ip }}</h1></a>
                         {% else %}
                             <a><h1>{{ comment.user.username }}</h1></a>
                         {% endif %}
