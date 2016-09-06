@@ -214,9 +214,9 @@ EMAIL_USE_TLS = True  # 与SMTP服务器通信时，是否启动TLS链接(安全
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-EMAIL_ADDRESS = 'admin@liucl.cn'
-EMAIL_USER = 'liucloo'
-EMAIL_KEY = 'BuAzytnSRcZQ9J7O'
+EMAIL_ADDRESS = ''
+EMAIL_USER = ''
+EMAIL_KEY = ''
 
 # 七牛配置
 QINIU_ACCESS_KEY = ''
