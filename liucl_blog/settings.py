@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'p1p2e^77+6ex*1@-s6hzcx7l3bx#g2q0w1za1c-x-1p@n6z^x*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['liucl.cn', '127.0.0.1']
+# ALLOWED_HOSTS = ['liucl.cn', '127.0.0.1']
 
 # Application definition
 
@@ -41,7 +41,8 @@ INSTALLED_APPS = (
     'blog',
     'liucl_auth',
     'liucl_comments',
-    'liucl_system'
+    'liucl_system',
+    'liucl_email',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -201,7 +202,7 @@ CACHES = {
 # 分页配置
 PAGE_NUM = 5
 
-# email配置
+# # email配置
 # 如果想要支持ssl (比如qq邮箱) 见 https://github.com/bancek/django-smtp-ssl
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp-mail.outlook.com'  # SMTP地址 例如: smtp.163.com
@@ -212,6 +213,10 @@ EMAIL_SUBJECT_PREFIX = u'liucl'  # 为邮件Subject-line前缀,默认是'[django
 EMAIL_USE_TLS = True  # 与SMTP服务器通信时，是否启动TLS链接(安全链接)。默认是false
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+EMAIL_ADDRESS = 'admin@liucl.cn'
+EMAIL_USER = 'liucloo'
+EMAIL_KEY = 'BuAzytnSRcZQ9J7O'
 
 # 七牛配置
 QINIU_ACCESS_KEY = ''

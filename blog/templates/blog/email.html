@@ -1,0 +1,90 @@
+{% extends "./blog/base.html" %}
+
+{% block main %}
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="to" class="col-sm-2 control-label">收件人*</label>
+            <div class="col-sm-6">
+                <input class="form-control" id="to" type="text" placeholder="发件人名称">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="fromName" class="col-sm-2 control-label">发件人名称</label>
+            <div class="col-sm-6">
+                <input class="form-control" id="fromName" type="text" placeholder="发件人名称">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="subject" class="col-sm-2 control-label">标题*</label>
+            <div class="col-sm-6">
+                <input class="form-control" id="subject" type="text" placeholder="标题">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="cc" class="col-sm-2 control-label">抄送地址</label>
+            <div class="col-sm-6">
+                <input class="form-control" id="cc" type="text" placeholder="抄送地址(;分割)">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="bcc" class="col-sm-2 control-label">密送地址</label>
+            <div class="col-sm-6">
+                <input class="form-control" id="bcc" type="text" placeholder="密送地址(;分割)">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">正文</label>
+            <div class="col-sm-6">
+                <textarea id="html" class="form-control" rows="6"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button id="email-send" class="btn btn-info col-sm-offset-2 col-sm-6">发送</button>
+        </div>
+
+    </form>
+
+{% endblock %}
+{% block js %}
+    <script language="javascript" type="text/javascript">
+        $('#email-send').click(function () {
+
+            if ($("#to").val() == "" || $("#subject").val() == "" || $("#html").val() == "") {
+                alert("非法参数");
+                return false;
+            }
+
+            $.ajax({
+                type: "POST",
+                url: "/email",
+                data: {
+                    "to": $("#to").val(),
+                    "fromName": $("#fromName").val(),
+                    "subject": $("#subject").val(),
+                    "cc": $("#cc").val(),
+                    "bcc": $("#bcc").val(),
+                    "html": $("#html").val()
+                },
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader("X-CSRFToken", $.cookie('csrftoken'));
+                },
+                success: function (data, textStatus) {
+                    console.log(data);
+                    var errors = data["message"];
+                    alert(errors);
+
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.responseText);
+                }
+            });
+            return false;
+        });
+    </script>
+{% endblock %}
