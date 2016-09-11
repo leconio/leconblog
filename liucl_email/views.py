@@ -42,7 +42,7 @@ class EmailView(BaseMixin, TemplateView):
         # 不同于登录SendCloud站点的帐号，您需要登录后台创建发信子帐号，使用子帐号和密码才可以进行邮件的发送。
         params = {"apiUser": settings.EMAIL_USER,
                   "apiKey": settings.EMAIL_KEY,
-                  "from": settings.EMAIL_ADDRESS,
+                  "from": fromName + '@' + settings.EMAIL_ADDRESS,
                   "fromname": fromName,
                   "cc": cc,
                   "bcc": bcc,
