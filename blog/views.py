@@ -104,7 +104,7 @@ class ArticleView(BaseMixin, DetailView):
         #         raise Http404
         #     else:
         #         article.view_times += 1
-        #         article.save()
+        #         article.save()xx
         #         visited_ips.append(ip)
         #
         #     # 更新缓存
