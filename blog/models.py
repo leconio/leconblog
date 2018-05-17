@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from django.conf import settings
+from django.urls import reverse
 
 
 class string_with_title(str):
     """ 用来修改admin中显示的app名称,因为admin app 名称是用 str.title()显示的,
     所以修改str类的title方法就可以实现.
     """
+
     def __new__(cls, value, title):
         instance = str.__new__(cls, value)
         instance._title = title
@@ -18,19 +20,20 @@ class string_with_title(str):
     __copy__ = lambda self: self
     __deepcopy__ = lambda self, memodict: self
 
+
 # Create your models here.
 STATUS = {
-        0: u'正常',
-        1: u'草稿',
-        2: u'删除',
+    0: u'正常',
+    1: u'草稿',
+    2: u'删除',
 }
 
 # 资讯来源
 NEWS = {
-        0: u'oschina',
-        1: u'chiphell',
-        2: u'freebuf',
-        3: u'cnBeta',
+    0: u'oschina',
+    1: u'chiphell',
+    2: u'freebuf',
+    3: u'cnBeta',
 }
 
 
@@ -70,7 +73,6 @@ class Category(models.Model):
         app_label = string_with_title('blog', u"博客管理")
 
     def get_absolute_url(self):
-        from django.core.urlresolvers import reverse
         return reverse('category-detail-view', args=(self.name,))
 
     def __unicode__(self):
@@ -83,8 +85,8 @@ class Category(models.Model):
 
 
 class Article(models.Model):
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=u'作者')
-    category = models.ForeignKey(Category, verbose_name=u'分类')
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=u'作者', on_delete=models.SET_NULL)
+    category = models.ForeignKey(Category, verbose_name=u'分类', on_delete=models.SET_NULL)
     title = models.CharField(max_length=100, verbose_name=u'标题')
     en_title = models.CharField(max_length=100, verbose_name=u'英文标题')
     img = models.CharField(max_length=200,
@@ -117,11 +119,10 @@ class Article(models.Model):
         app_label = string_with_title('blog', u"博客管理")
 
     def get_absolute_url(self):
-        from django.core.urlresolvers import reverse
         return reverse('article-detail-view', args=(self.en_title,))
 
     def __unicode__(self):
-            return self.title
+        return self.title
 
     __str__ = __unicode__
 
@@ -141,7 +142,6 @@ class Column(models.Model):
         app_label = string_with_title('blog', u"博客管理")
 
     def get_absolute_url(self):
-        from django.core.urlresolvers import reverse
         return reverse('column-detail-view', args=(self.name,))
 
     def __unicode__(self):
@@ -155,7 +155,7 @@ class Carousel(models.Model):
     summary = models.TextField(blank=True, null=True, verbose_name=u'摘要')
     img = models.CharField(max_length=200, verbose_name=u'轮播图片',
                            default='/static/img/carousel/default.jpg')
-    article = models.ForeignKey(Article, verbose_name=u'文章')
+    article = models.ForeignKey(Article, verbose_name=u'文章', on_delete=models.CASCADE)
     create_time = models.DateTimeField(u'创建时间', auto_now_add=True)
 
     class Meta:
@@ -179,7 +179,6 @@ class News(models.Model):
         app_label = string_with_title('blog', u"博客管理")
 
     def get_absolute_url(self):
-        from django.core.urlresolvers import reverse
         return reverse('news-detail-view', args=(self.pk,))
 
     def __unicode__(self):

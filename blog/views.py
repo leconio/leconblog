@@ -13,8 +13,8 @@ from django.http import HttpResponse, Http404
 from django.shortcuts import render
 from django.template import loader
 from django.views.generic import TemplateView, ListView, DetailView
-from liucl_comments.models import Comment
-from liucl_system.models import Link
+from comments.models import Comment
+from admin.models import Link
 from pygments import highlight
 from pygments.lexers import get_lexer_by_name
 from pygments.formatters import html
