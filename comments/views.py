@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
-import logging
 import datetime
-from django.shortcuts import render
+import logging
+
+from django.core.exceptions import PermissionDenied
 from django.http import HttpResponse
 from django.views.generic import View
-from django.core.exceptions import PermissionDenied
 
-from auth.models import liuclUser
-from comments.models import Comment
-from admin.models import Notification
+from my_admin.models import Notification
+from my_auth.models import MyUser
 from blog.models import Article
+from comments.models import Comment
 
 ArticleModel = Article
 # logger
@@ -45,12 +45,12 @@ class CommentControl(View):
                             user.username
                     )
             )
-            if not liuclUser.objects.filter(username=user.username):
-                if not liuclUser.objects.filter(username=u'yiming'):
-                    liuclUser.objects.create(
+            if not MyUser.objects.filter(username=user.username):
+                if not MyUser.objects.filter(username=u'yiming'):
+                    MyUser.objects.create(
                             username='yiming'
                     )
-                user = liuclUser.objects.filter(username='yiming')[0]
+                user = MyUser.objects.filter(username='yiming')[0]
                 is_anonymous = True
                 # return HttpResponse(u"请登陆！", status=403)
         # 保存评论

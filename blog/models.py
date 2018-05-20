@@ -60,7 +60,7 @@ class Nav(models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=40, verbose_name=u'名称')
     parent = models.ForeignKey('self', default=None, blank=True, null=True,
-                               verbose_name=u'上级分类')
+                               verbose_name=u'上级分类', on_delete=models.CASCADE)
     rank = models.IntegerField(default=0, verbose_name=u'排序')
     status = models.IntegerField(default=0, choices=STATUS.items(),
                                  verbose_name=u'状态')
@@ -85,8 +85,8 @@ class Category(models.Model):
 
 
 class Article(models.Model):
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=u'作者', on_delete=models.SET_NULL)
-    category = models.ForeignKey(Category, verbose_name=u'分类', on_delete=models.SET_NULL)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=u'作者', on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, verbose_name=u'分类', on_delete=models.CASCADE)
     title = models.CharField(max_length=100, verbose_name=u'标题')
     en_title = models.CharField(max_length=100, verbose_name=u'英文标题')
     img = models.CharField(max_length=200,

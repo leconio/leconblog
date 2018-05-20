@@ -22,13 +22,13 @@ class string_with_title(str):
 
 
 class Comment(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=u'用户')
-    article = models.ForeignKey(Article, verbose_name=u'文章')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=u'用户', on_delete=models.CASCADE)
+    article = models.ForeignKey(Article, verbose_name=u'文章', on_delete=models.CASCADE)
     text = models.TextField(verbose_name=u'评论内容')
     create_time = models.DateTimeField(u'创建时间', auto_now_add=True)
 
     parent = models.ForeignKey('self', default=None, blank=True, null=True,
-                               verbose_name=u'引用')
+                               verbose_name=u'引用', on_delete=models.CASCADE)
     isAnonymous = models.BooleanField(default=False)
     from_ip = models.CharField(default='127.0.0.1', max_length=20, verbose_name='ip')
 

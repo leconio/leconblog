@@ -16,9 +16,9 @@ from django.core.mail import send_mail
 from django.http import HttpResponse, Http404
 from django.utils.http import (urlsafe_base64_decode)
 
-from admin.models import Notification
-from auth.forms import MyUserCreationForm, MyPasswordRestForm
-from auth.models import MyUser
+from my_admin.models import Notification
+from my_auth.forms import MyUserCreationForm, MyPasswordRestForm
+from my_auth.models import MyUser
 
 logger = logging.getLogger(__name__)
 
@@ -80,7 +80,7 @@ def register(request):
     username = request.POST.get("username", "")
     password1 = request.POST.get("password1", "")
     password2 = request.POST.get("password2", "")
-    email = request.POST.get("email", "")
+    email = request.POST.get("my_email", "")
 
     form = MyUserCreationForm(request.POST)
 
@@ -238,7 +238,7 @@ def changetx(request):
     imgData = base64.b64decode(data)
 
     filename = "tx_100x100_{}.jpg".format(request.user.id)
-    filedir = "auth/static/tx/"
+    filedir = "my_auth/static/tx/"
     static_root = getattr(settings, 'STATIC_ROOT', None)
     if static_root:
         filedir = os.path.join(static_root, 'tx')

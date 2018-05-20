@@ -26,4 +26,4 @@ class MyUser(AbstractUser):
                              verbose_name=u'简介')
 
     class Meta(AbstractUser.Meta):
-        app_label = string_with_title('auth', u"用户管理")
+        app_label = string_with_title('my_auth', u"用户管理")

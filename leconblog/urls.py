@@ -21,54 +21,54 @@ class StaticViewSitemap(Sitemap):
 
 sitemaps = {
     'article-is-top': GenericSitemap(
-            {
-                'queryset': Article.objects.filter(
-                        status=0, is_top=True
-                ).all(),
-                'date_field': 'pub_time'
-            },
-            priority=1.0,
-            changefreq='daily'
+        {
+            'queryset': Article.objects.filter(
+                status=0, is_top=True
+            ).all(),
+            'date_field': 'pub_time'
+        },
+        priority=1.0,
+        changefreq='daily'
     ),
     'article-is-not-top': GenericSitemap(
-            {
-                'queryset': Article.objects.filter(status=0).all(),
-                'date_field': 'pub_time'
-            },
-            priority=0.8,
-            changefreq='daily'
+        {
+            'queryset': Article.objects.filter(status=0).all(),
+            'date_field': 'pub_time'
+        },
+        priority=0.8,
+        changefreq='daily'
     ),
     'news': GenericSitemap(
-            {
-                'queryset': News.objects.all(),
-                'data_field': 'pub_time'
-            },
-            priority=0.6,
-            changefreq='daily'
+        {
+            'queryset': News.objects.all(),
+            'data_field': 'pub_time'
+        },
+        priority=0.6,
+        changefreq='daily'
     ),
     'category': GenericSitemap(
-            {
-                'queryset': Category.objects.all()
-            },
-            priority=0.9,
-            changefreq='daily'
+        {
+            'queryset': Category.objects.all()
+        },
+        priority=0.9,
+        changefreq='daily'
     ),
     'column': GenericSitemap(
-            {
-                'queryset': Column.objects.all()
-            },
-            priority=0.9,
-            changefreq='daily'
+        {
+            'queryset': Column.objects.all()
+        },
+        priority=0.9,
+        changefreq='daily'
     ),
     'static': StaticViewSitemap
 }
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^my_admin/', admin.site.urls),
     url(r'', include('blog.urls')),
     url(r'', include('comments.urls')),
-    url(r'', include('auth.urls')),
-    url(r'', include('email.urls')),
+    url(r'', include('my_auth.urls')),
+    url(r'', include('my_email.urls')),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
         name='django.contrib.sitemaps.views.sitemap')
 ]

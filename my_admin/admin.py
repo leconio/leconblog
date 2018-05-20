@@ -1,5 +1,5 @@
 from django.contrib import admin
-from admin.models import Notification, Link
+from my_admin.models import Notification, Link
 
 # Register your models here.
 

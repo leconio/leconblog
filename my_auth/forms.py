@@ -8,7 +8,7 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.core.mail import send_mail
 from django.utils.encoding import force_bytes
 
-from auth.models import MyUser
+from my_auth.models import MyUser
 
 logger = logging.getLogger(__name__)
 
@@ -120,7 +120,7 @@ class MyPasswordRestForm(forms.Form):
 
     def clean(self):
         username = self.cleaned_data.get('username')
-        email = self.cleaned_data.get('email')
+        email = self.cleaned_data.get('my_email')
 
         if username and email:
             try:

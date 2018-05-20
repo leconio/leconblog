@@ -4,6 +4,7 @@ from blog.views import (IndexView, ArticleView, AllView, SearchView,
 from django.views.generic import TemplateView, DetailView
 from blog.models import News
 
+app_name = 'blog'
 urlpatterns = [
         url(r'^$', IndexView.as_view(), name='index-view'),
         url(r'^article/(?P<slug>\w+).html$',

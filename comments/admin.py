@@ -9,4 +9,5 @@ class CommentAdmin(admin.ModelAdmin):
     list_display = ('user', 'article', 'text', 'create_time')
     fields = ('user', 'article', 'parent', 'text')
 
+
 admin.site.register(Comment, CommentAdmin)

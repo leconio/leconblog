@@ -14,7 +14,7 @@ from django.shortcuts import render
 from django.template import loader
 from django.views.generic import TemplateView, ListView, DetailView
 from comments.models import Comment
-from admin.models import Link
+from my_admin.models import Link
 from pygments import highlight
 from pygments.lexers import get_lexer_by_name
 from pygments.formatters import html
